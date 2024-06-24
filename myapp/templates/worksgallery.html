@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends 'AdminHome.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+            <h1 style="color:rgb(28, 4, 92);font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;padding-top:10px;text-align:center;">
+            VIEW GALLERY</h1><br><br>
+<div style="height:1000px;margin-left:300px;">
+    {% for i in data %}
+    <a href="{% url 'gallerypage' sername=i.Service %}"><button class="" style="width:400px; height:60px;border: 3px solid purple;color:blue;font-size:18pt;font-weight:bold;" type="button">{{i.Service}}</button> </a><br><br>
+    {% endfor %}
+</div>
+
+</body>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+
+    <script>
+        $(document).ready(function(){
+           $("button").mouseenter(function(){
+                $(this).css("background-color","rgb(136, 225, 247)")
+            })
+
+            $("button").mouseleave(function(){
+                $(this).css("background-color","white")
+            })
+
+
+            })
+
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</html>
+{% endblock %}

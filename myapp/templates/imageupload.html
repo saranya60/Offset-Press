@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% extends 'AdminHome.html' %}
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <link rel="stylesheet" href="{% static 'style2.css' %}">
+
+</head>
+<body>
+<div class="card" style="border:2px solid black; ">
+    <div class="card-body" >
+        <div style="height:100px;border:hidden;width:100%;">
+            <h1 style="color:rgb(28, 4, 92);font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;padding-top:10px;text-align:center;">
+            Image Upload</h1></div>
+        <form style="margin-left:120px;" class="form-inline" method="post" action="{% url 'saveimage' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+                <select class="form-field" style="background: #f8f4e5; min-width: 250px;padding-left: 5px;
+  outline: none;color: black;" name="title">
+    <option>Select Service</option>
+    {% for i in ser %}
+    <option>{{i.Service}}</option>
+      {% endfor %}
+    </select>
+
+            <button style="width:500px;" class="form-field" type="button"><input name="image" type="file"></button><br>
+            <button style="margin-top:50px;" type="submit" class="inpbutton">Upload</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
+{% endblock %}

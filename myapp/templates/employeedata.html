@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% extends 'AdminHome.html' %}
+{% load static %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+            <h1 style="color:rgb(28, 4, 92);font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;padding-top:20px;text-align:center;">
+            View Employee Details</h1><br><br>
+
+
+<table style="width:100%;border:2px solid purple;">
+    <tr style="border:1px solid purple;">
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Employee Name</h4></td>
+          <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Mobile</h4></td>
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Email</h4></td>
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Salary</h4></td>
+
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Image</h4></td>
+        <td colspan="2" style=";border:1px solid purple;height:50px;text-align:center;color:purple;"><h4>Options</h4></td>
+
+</tr>
+    {% for i in data %}
+<tr style="border:1px solid purple;">
+    <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Empname}} </td>
+        <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Mobile}} </td>
+    <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Email}} </td>
+    <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Salary}} </td>
+
+    <td style="border:1px solid purple;height:50px;text-align:center;"><img src="{{i.Image.url}}" width="150px" height="150px">
+    <td style="height:50px;text-align:center;"><a href="{% url 'edit_emp' dataid=i.id %}"><img src="{% static 'assets/images/edit.jpg' %}" width="40px" height="40px"></a>
+    <a href="{% url 'delete_emp' dataid=i.id %}"><img src="{% static 'assets/images/delete.jpeg' %}" style="margin-left:30px;" height="40px"></a></td>
+
+</tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
+{% endblock %}

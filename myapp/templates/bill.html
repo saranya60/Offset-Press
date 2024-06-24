@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>BRAINWAVE OFFSET PRESS</h1>
+    <h2>BILL DETAILS</h2>
+    <form method="post" action="{% url 'savebill' dataid=i.id %}">
+
+    <table width="40%">
+        
+        <tr>
+            <td>Date</td>
+            <td>{{data.Date}}</td>
+        </tr>
+        <tr>
+            <td>Customer Name</td>
+            <td>{{data.Customer}}</td>
+        </tr>
+        <tr>
+            <td>Mobile</td>
+            <td>{{data.Mobile}}</td>
+        </tr>
+        <tr>
+            <td>Service</td>
+            <td>{{data.Service}}</td>
+        </tr>
+        <tr>
+            <td>Quantity</td>
+            <td>{{data.quantity}}</td>
+        </tr>
+        <tr>
+            <td style="color: red;">Total Amount</td>
+            <td style="color: red;font-size: 18pt;">{{am}}.Rs</td>
+        </tr>
+        
+    </table>
+    <button type="submit">Save</button>
+</body>
+<style>
+table{
+    margin-left: 400px;
+    border: 1px solid black;
+}
+td{
+    font-size: medium;
+    font-weight: bold;
+    border: 1px solid black;
+    height: 60px;
+    padding-left: 20px;
+}
+h1{
+    text-align: center;
+    color: #000066;
+}
+h2{
+    text-align: center;
+    padding-bottom: 30px;
+}
+</style>
+</html>

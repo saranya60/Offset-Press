@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% extends 'AdminHome.html' %}
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 style="text-align:center;color:#000066;padding-top:20px;">WORK REGISTRATION</h1>
+
+
+                <div class="row g-4">
+                    <div class="col-12">
+                    </div>
+                    <div style="margin-left:120px;background-color:palegreen;width:800px;" class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form method="post" action="{% url 'savework' %}" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="row g-3" style="margin-top:25px;color:black;font-weight:bold;">
+                                    <div class="col-md-6">
+                                        <div class="form-floating" style="padding-top:10px;">
+                                            <input type="text" style="color:black;font-weight:bold;" name="name" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating" style="padding-top:10px;">
+                                            <input style="color:black;font-weight:bold;" type="email" name="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating" style="padding-top:10px;">
+                                            <input style="color:black;font-weight:bold;" name="mobile" type="text" class="form-control" placeholder="Mobile Number">
+                                            <label>Mobile</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-floating" style="padding-top:10px;">
+                                            <select class="form-control" name="service" style="color:black;font-weight:bold;">
+                                                <option>Select Service</option>
+                                                {% for i in ser %}
+                                                 <option>{{i.Service}}</option>
+                                                    {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating" style="margin-bottom:10px;">
+                                            <textarea class="form-control" placeholder="Type your Contents" name="content" style="color:black;font-weight:bold;height: 150px"></textarea>
+                                            <label>Contents</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+
+
+
+
+                                         <input style="color:black;font-weight:bold;width: 700px;background-color:white;height:50px;;
+    margin-top:10px;padding-top:10px;padding-left:220px;margin-left:40px;" type="file" required name="image"><br><br>
+                                 <div class="col-12">
+                                        <div class="form-floating" style="margin-bottom:10px;">
+    <input style="width: 400px;height:50px;margin-left:230px;color:black;font-weight:bold;" type="number" min="1" placeholder="Number of Items" name="quantity"><br><br>
+                                        </div></div>
+                                    <div class="col-12">
+                                       <h4> <button class="btn btn-primary w-100 py-3" type="submit">REGISTER</button></h4>
+                                    </div>
+                                </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+</body>
+
+</html>
+{% endblock %}

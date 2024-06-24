@@ -1,0 +1,158 @@
+
+
+        
+        .abc{
+            width: auto;
+            height: 80px;
+            background-image: linear-gradient(blue,white);
+
+            border: hidden;
+            
+        }
+        .con12{
+            width: 1500;
+            height: 200px;
+            background-image: linear-gradient(white 50%,blue);
+            border: hidden;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            border-radius: 8px;
+            border-bottom: hidden;
+            margin-top: -20px;
+            border: 1px solid rgb(173, 172, 172);
+            
+        }
+        .lg{
+            background-image: linear-gradient(rgb(253, 251, 251),rgb(247, 11, 11) );
+            width: 1400px;
+            height: 450px;
+            border: hidden;
+            margin-top: 20px;
+        }
+        h1{
+            color: rgb(28, 4, 92);
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 72pt;
+        }
+        .tb{
+            height: 200px;
+            background-image: linear-gradient(white 25%,blue 25%,white);
+        }
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(55, 3, 71);
+            font-weight: lighter;
+            font-weight: 600;
+            font-size: 35pt;
+            margin-left: 80px;
+        }
+        body{
+            background-image: url("white-unsplash-9d0375d2.jpg");
+        }
+        
+        .carodiv{
+            width: 1500px;
+            height: 450px;
+            border: hidden;
+            margin-top: 50px;
+        }
+        .qt{
+            width: 300px;
+            height: 450px;
+            background-image: linear-gradient(yellow,green);
+        }
+        .card1{
+            
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 30px;
+        }
+        
+        .img3{
+            width: 400px;
+            height: 400px;
+        }
+        .mybutton{
+            background-color: rgb(246, 247, 241);
+            color: rgb(35, 9, 100);
+            margin-top: 7px;
+            font-weight: bold;
+            border: 2px solid rgb(105, 7, 7);
+        }
+        .divimg1{
+            width: 800px;
+            height: 450px;
+
+        }
+        .divimg2{
+            width: 800px;
+            height: 450px;
+            margin-left: 805px;
+        }
+        .ser{
+            margin-left: 1050px;
+            margin-top: -25px;
+        }
+        .serbtn{
+            width: auto;
+            height: 50px;
+            background-color: white;
+            color: blue;
+            padding-top: 10px;
+        }
+        .crsldiv{
+            width: 600px;
+            height: 400px;
+            margin-top: -450px;
+            margin-left: 650px;
+            
+        }
+        .ftb{
+            width: 3500px;
+            height: 150px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 50px;
+            color: rgb(41, 2, 44);
+        }
+        .mod1{
+            width: 400px;
+            height: 35px;
+            color: rgb(3, 3, 66);
+            border: 2px solid rgb(27, 2, 48);
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .modbtn{
+            width: 150px; height: 70px;
+            background-color: rgb(252, 241, 179);
+            color: rgb(30, 5, 80);
+            margin-top: 7px;
+            font-weight: bold;
+            font-size: large;
+            border: 5px solid rgb(35, 2, 48);
+            margin-left: 650px;
+            
+ 
+        }
+        .img4{
+            width: 320px;
+            height: 300px;
+        }
+        input{
+            width: 400px;
+            height: 50px;
+            border: hidden;
+            border-radius: 20px;
+            padding-left: 15px;
+            color: black;
+            margin-top: 30px;
+        }
+        .img5{
+            width: 500px;
+            height: 300px;
+        }
+    

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Brainwave</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'styleform.css' %}">
+
+</head>
+<body>
+
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="left" style="border:3px solid black;border-radius:20px;height:500px;margin-top:70px;margin-left:50px;">
+    <div class="header">
+      <h1 style="color:purple;" class="animation a1">Welcome Back</h1>
+      <h4 style="color:blue;" class="animation a2">Log in to your account using username and password</h4>
+    </div>
+
+    <div class="form">
+      <form class="form" method="post" action="{% url 'admin_login' %}">
+        {% csrf_token %}
+      <input type="text" class="form-field animation a3" placeholder="Username" name="username">
+      <input type="password" class="form-field animation a4" placeholder="Password" name="password">
+      <p class="animation a5"><a href="#">Forgot Password</a></p>
+      <button type="submit" class="animation a6" style="margin-left:25px;"> LOGIN</button>
+         </form>
+    </div>
+
+  </div>
+  <div class="right"></div>
+</div>
+<!-- partial -->
+
+</body>
+</html>

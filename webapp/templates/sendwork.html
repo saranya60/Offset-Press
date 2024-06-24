@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{% extends 'webhome.html' %}
+{% load static %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1 style="margin-top:30px;text-align:center;margin-left:100px;color:#000066;padding-top:20px;">SEND YOUR WORK</h1>
+
+
+                <div class="row g-4">
+                    <div class="col-12">
+                    </div>
+                    <div style="margin-left:400px;background-color:#000066;" class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form method="post" action="{% url 'sendworks' %}" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <div class="row g-3" style="margin-top:25px;color:black;font-weight:bold;">
+                                    <div class="col-md-6">
+                                        <div class="form-floating" style="padding-top:10px;">
+                                            <input type="text" style="color:black;font-weight:bold;" name="name" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating" style="padding-top:10px;">
+                                            <input style="color:black;font-weight:bold;" type="email" name="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="form-floating" style="padding-top:10px;margin-left:150px;">
+                                            <input style="color:black;font-weight:bold;" name="mobile" type="text" class="form-control" placeholder="Mobile Number">
+                                            <label>Your Mobile</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating" style="width:300px;">
+                                            <select name="service" style="color:black;font-weight:bold;width:600px;height:50px;margin-left:30px;">
+                                                <option>Select Service</option>
+                                                {% for i in ser %}
+                                                 <option>{{i.Service}}</option>
+                                                    {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating" style="margin-bottom:10px;">
+                                            <textarea class="form-control" placeholder="Type your Contents" name="content" style="color:black;font-weight:bold;height: 150px"></textarea>
+                                            <label>Contents</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+
+
+
+
+                                         <input style="color:black;font-weight:bold;width: 600px;background-color:white;height:50px;;
+    margin-top:10px;padding-top:10px;padding-left:220px;margin-left:30px;" type="file" required name="image"><br><br>
+                                 <div class="col-12">
+                                        <div class="form-floating" style="margin-bottom:10px;">
+    <input style="width: 300px;height:50px;margin-left:200px;color:black;font-weight:bold;" type="number" min="1" placeholder="Number of Items" name="quantity"><br><br>
+                                        </div></div>
+                                    <div class="col-12">
+                                       <h4> <button class="btn btn-primary w-100 py-3" type="submit">Send</button></h4>
+                                    </div>
+                                </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+</body>
+
+</html>
+{% endblock %}

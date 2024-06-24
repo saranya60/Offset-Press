@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% extends 'AdminHome.html' %}
+{% load static %}
+
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'assets/style2.css' %}">
+</head>
+<body>
+<div class="card" style="border:2px solid black; ">
+    <div class="card-body" >
+        <div style="height:100px;border:hidden;width:100%;">
+            <h1 style="color:rgb(28, 4, 92);font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;padding-top:10px;text-align:center;">
+            Service Registration</h1></div><br><br>
+        <form style="margin-left:120px;" class="form-inline" method="post" action="{% url 'updateservice' dataid=data.id %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input name="service" type="text" class="form-field" placeholder="Enter Service" value="{{data.Service}}"><br><br>
+            <img src="{{data.Image.url}}" width="250px" height="150px" style="margin-left:100px;border:2px solid black;"><br>
+            <button style="width:500px;" class="form-field" type="button"><input name="simage" type="file"></button><br>
+            <button style="margin-top:50px;" type="submit" class="inpbutton">Update</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

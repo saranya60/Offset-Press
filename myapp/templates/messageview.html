@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+            <h1 style="color:rgb(28, 4, 92);font-family: 'Times New Roman', Times, serif;
+            font-weight: bold;padding-top:20px;text-align:center;">
+            View Messages</h1><br><br>
+
+
+<table style="width:100%;border:2px solid purple;">
+    <tr style="border:1px solid purple;">
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Name</h4></td>
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Email</h4></td>
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Mobile</h4></td>
+    <td style="border:1px solid purple;text-align:center;height:50px;color:purple;"><h4>Message</h4></td>
+
+</tr>
+    {% for i in msg %}
+<tr style="border:1px solid purple;">
+    <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Name}} </td>
+    <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Email}} </td>
+    <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Mobile}} </td>
+    <td style="border:1px solid purple;height:50px;text-align:center;color:purple;font-size:14pt;font-weight:bold;">{{i.Message}} </td>
+
+</tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

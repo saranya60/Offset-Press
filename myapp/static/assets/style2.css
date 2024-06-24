@@ -1,0 +1,31 @@
+.form-field {
+  height: 50px;
+  width: 500px;
+  margin-left: 100px;
+  color: purple;
+  padding: 0 16px;
+  border: 2px solid #000000;
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: "Rubik", sans-serif;
+  outline: 0;
+  transition: 0.2s;
+  margin-top: 20px;
+}
+
+.form-field:focus {
+  border-color: #0f7ef1;
+}
+
+.inpbutton {
+  padding: 12px 10px;
+  width:300px;
+  height: 100px;
+  border: 0;
+  border-radius: 25px;
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: "Rubik", sans-serif;
+  margin-left: 200px;
+
+}
